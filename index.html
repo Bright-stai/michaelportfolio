@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Michael Bassey | Cybersecurity Engineer & VAPT Specialist</title>
+  <meta name="description" content="Portfolio of Michael Bassey - Cybersecurity Engineer specializing in Application Security, VAPT, API Security, SAST/DAST, and DevSecOps.">
+  <meta name="keywords" content="Michael Bassey, Cybersecurity Engineer, Penetration Tester, VAPT, AppSec, API Security, Bug Bounty, Ethical Hacker, Abuja Nigeria">
+  <meta name="author" content="Michael Bassey">
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Michael Bassey | Cybersecurity Engineer">
+  <meta property="og:description" content="Security Engineer with hands-on experience across Application, Network, and Cloud Security. Identified 50+ vulnerabilities and reduced attack surfaces by 40%.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Background Ambient Glows -->
+  <div class="ambient-glow glow-1" aria-hidden="true"></div>
+  <div class="ambient-glow glow-2" aria-hidden="true"></div>
+
+  <!-- Header / Sticky Navigation Bar -->
+  <header class="site-header" id="header">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="Michael Bassey - Home">
+        <span class="logo-shield" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            <path d="m9 12 2 2 4-4"/>
+          </svg>
+        </span>
+        <span class="logo-text">Michael<span>.Bassey</span></span>
+        <span class="badge-status">
+          <span class="status-dot"></span>
+          <span>Open to Roles</span>
+        </span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions (Theme Toggle & CTA) -->
+      <div class="nav-actions">
+        <button id="theme-toggle" class="icon-btn theme-toggle" aria-label="Toggle light and dark mode" title="Toggle Theme">
+          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <a href="Michael_Bassey_CV.pdf" download="Michael_Bassey_CV.pdf" class="btn btn-sm btn-outline hide-mobile cv-download-btn" title="Download Official CV (PDF)" target="_blank">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          <span>CV (PDF)</span>
+        </a>
+        <a href="#contact" class="btn btn-sm btn-primary hide-mobile">Hire Me</a>
+
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <nav aria-label="Mobile Navigation">
+        <ul class="mobile-nav-links">
+          <li><a href="#about" class="mobile-link">About Me</a></li>
+          <li><a href="#skills" class="mobile-link">Skills & Competencies</a></li>
+          <li><a href="#experience" class="mobile-link">Experience</a></li>
+          <li><a href="#projects" class="mobile-link">Security Projects</a></li>
+          <li><a href="#education" class="mobile-link">Education & Certifications</a></li>
+          <li><a href="#contact" class="mobile-link">Get In Touch</a></li>
+        </ul>
+        <div class="mobile-cta-group">
+          <a href="#contact" class="btn btn-primary btn-block mobile-link">Let's Connect</a>
+          <a href="Michael_Bassey_CV.pdf" download="Michael_Bassey_CV.pdf" class="btn btn-secondary btn-block cv-download-btn" target="_blank">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+            <span>Download Official CV (PDF)</span>
+          </a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <!-- HERO SECTION -->
+    <section class="section hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🛡️</span>
+            <span>Cybersecurity Engineer & VAPT Specialist</span>
+          </div>
+
+          <h1 class="hero-title">
+            Securing Digital Assets with Precision, <span class="text-gradient">Offensive Insight</span> & Strategic Defense.
+          </h1>
+
+          <p class="hero-description">
+            Hi, I’m <strong>Michael Bassey</strong>. A Security Engineer based in Abuja, Nigeria, with hands-on experience across Application Security, Network Security, IT systems, and Vulnerability Assessment and Penetration Testing (VAPT). Proficient in SAST & DAST methodologies, committed to hardening client systems and building resilient DevSecOps pipelines.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#contact" class="btn btn-primary">
+              <span>Contact Me</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="Michael_Bassey_CV.pdf" download="Michael_Bassey_CV.pdf" class="btn btn-secondary cv-download-btn" title="Download Official CV (PDF)" target="_blank">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV (PDF)</span>
+            </a>
+            <a href="#experience" class="btn btn-ghost">
+              <span>View Experience</span>
+            </a>
+          </div>
+
+          <!-- Quick Contact Meta Pills -->
+          <div class="hero-meta-list">
+            <div class="meta-item">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Abuja, Nigeria</span>
+            </div>
+            <a href="mailto:michaelbassey808@gmail.com" class="meta-item meta-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <span>michaelbassey808@gmail.com</span>
+            </a>
+            <a href="https://linkedin.com/in/michael-bassey" target="_blank" rel="noopener noreferrer" class="meta-item meta-link">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.26c-.95 0-1.72.77-1.72 1.72s.77 1.72 1.72 1.72 1.73-.77 1.73-1.72-.78-1.72-1.73-1.72z"/></svg>
+              <span>LinkedIn Profile</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Terminal / Metric Card Widget -->
+        <div class="hero-visual">
+          <div class="terminal-card">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot dot-red"></span>
+                <span class="dot dot-yellow"></span>
+                <span class="dot dot-green"></span>
+              </div>
+              <div class="terminal-title">sec-analyst@michael-bassey:~</div>
+              <div class="terminal-badge">LIVE SCAN</div>
+            </div>
+            <div class="terminal-body">
+              <p class="code-line"><span class="cmd-prompt">$</span> <span class="cmd-text">nmap -sV -sC -T4 target.client.corp</span></p>
+              <p class="code-output text-dim">[+] Target active: 10.0.4.15</p>
+              <p class="code-output text-dim">[+] Ports 80, 443, 8080 open (REST API + Web Services)</p>
+              <p class="code-line"><span class="cmd-prompt">$</span> <span class="cmd-text">run audit --target=apis --sast --dast</span></p>
+              <p class="code-output text-accent">[+] RBAC & BOLA testing initiated...</p>
+              <p class="code-output text-accent">[+] 0 zero-day data leaks undetected</p>
+              <p class="code-output text-success">[✓] Remediation roadmap formulated for engineering team</p>
+
+              <!-- Live Metrics Matrix Inside Terminal -->
+              <div class="terminal-stats-grid">
+                <div class="stat-box">
+                  <div class="stat-number" data-count="50">50+</div>
+                  <div class="stat-label">Vulnerabilities Remediated</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number" data-count="40">40%</div>
+                  <div class="stat-label">Attack Surface Reduction</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number" data-count="100">100%</div>
+                  <div class="stat-label">Compliance Design Delivery</div>
+                </div>
+                <div class="stat-box">
+                  <div class="stat-number" data-count="500">500+</div>
+                  <div class="stat-label">Users Governed via RBAC</div>
+                </div>
+              </div>
+            </div>
+            <div class="terminal-footer">
+              <span class="status-indicator"></span>
+              <span>Defense-in-Depth Architecture Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT ME SECTION -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Bridging Offensive Security & Resilient Engineering</h2>
+          <p class="section-subtitle">
+            A dedicated security professional focused on eliminating vulnerabilities before adversaries can exploit them.
+          </p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-bio-card">
+            <h3 class="about-heading">
+              <span class="gradient-text">Who I Am</span> & How I Add Value
+            </h3>
+            <p>
+              I am a <strong>Cybersecurity Engineer</strong> with a strong multidisciplinary background spanning Application Security, Network Security, IT systems infrastructure, and Vulnerability Assessment and Penetration Testing (VAPT).
+            </p>
+            <p>
+              Throughout my engagements with security consultancies, client systems, and active bug bounty hunting on <strong>HackerOne</strong>, I have uncovered and remediated <strong>50+ critical security vulnerabilities</strong>. By deploying comprehensive SAST and DAST methodologies, testing role-based access control (RBAC), and assessing complex API interfaces, I have helped organizations compress their attack surfaces by up to <strong>40%</strong>.
+            </p>
+            <p>
+              What sets my approach apart is the ability to <em>translate intricate technical findings into pragmatic, actionable remediation blueprints</em> for engineering and DevOps teams. I don't just point out flaws; I collaborate side-by-side with developers to build secure authentication flows, harden system configurations, and weave security directly into CI/CD pipelines.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <div class="highlight-icon">🎯</div>
+                <div>
+                  <h4>Offensive & Defensive Synergy</h4>
+                  <p>Equally adept at simulating black-box attacker mindsets and architecting defense-in-depth safeguards.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">⚡</div>
+                <div>
+                  <h4>DevSecOps Expansion</h4>
+                  <p>Actively expanding deep expertise into CI/CD security automation, container hardening, and cloud-native DevSecOps.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🤝</div>
+                <div>
+                  <h4>Human & Process Layer</h4>
+                  <p>Experienced in launching bug bounty programs, triaging CVSS reports, and delivering employee phishing simulation trainings.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-sidebar">
+            <!-- Fast Facts Card -->
+            <div class="card info-card">
+              <h4 class="card-title">Quick Information</h4>
+              <ul class="info-list">
+                <li>
+                  <span class="info-label">Full Name:</span>
+                  <span class="info-value">Michael Bassey</span>
+                </li>
+                <li>
+                  <span class="info-label">Current Role:</span>
+                  <span class="info-value">Security Engineer</span>
+                </li>
+                <li>
+                  <span class="info-label">Location:</span>
+                  <span class="info-value">Abuja, Nigeria (Remote & Hybrid Ready)</span>
+                </li>
+                <li>
+                  <span class="info-label">Email:</span>
+                  <span class="info-value"><a href="mailto:michaelbassey808@gmail.com">michaelbassey808@gmail.com</a></span>
+                </li>
+                <li>
+                  <span class="info-label">Phone:</span>
+                  <span class="info-value"><a href="tel:+2349064430309">+234 906 443 0309</a></span>
+                </li>
+                <li>
+                  <span class="info-label">Education:</span>
+                  <span class="info-value">B.Sc. in Genetics & Biotechnology</span>
+                </li>
+                <li>
+                  <span class="info-label">Core Specialization:</span>
+                  <span class="info-value">VAPT, AppSec, API Security, SAST/DAST</span>
+                </li>
+                <li style="margin-top: 0.75rem;">
+                  <a href="Michael_Bassey_CV.pdf" download="Michael_Bassey_CV.pdf" class="btn btn-sm btn-outline btn-block cv-download-btn" target="_blank">
+                    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span>Download Official CV (PDF)</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Focus Areas / Badges -->
+            <div class="card focus-card">
+              <h4 class="card-title">Current Focus & Trajectory</h4>
+              <div class="tag-cloud">
+                <span class="tag tag-accent">Application Security</span>
+                <span class="tag tag-accent">API Penetration Testing</span>
+                <span class="tag tag-accent">DevSecOps Integration</span>
+                <span class="tag">Vulnerability Management</span>
+                <span class="tag">HackerOne Bug Bounty</span>
+                <span class="tag">IAM & RBAC Auditing</span>
+                <span class="tag">Cloud Security (Multicloud)</span>
+                <span class="tag">Threat Modeling</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS SECTION -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Competencies</div>
+          <h2 class="section-title">Core Skills & Technical Arsenal</h2>
+          <p class="section-subtitle">
+            A comprehensive, battle-tested security toolkit categorized across defensive domains, offensive tools, and collaborative workflows.
+          </p>
+        </div>
+
+        <div class="skills-filter-container">
+          <div class="filter-tabs" role="tablist">
+            <button class="filter-tab active" data-filter="all" role="tab" aria-selected="true">All Skills</button>
+            <button class="filter-tab" data-filter="domains" role="tab" aria-selected="false">Security Domains</button>
+            <button class="filter-tab" data-filter="tools" role="tab" aria-selected="false">Tools & Tech</button>
+            <button class="filter-tab" data-filter="professional" role="tab" aria-selected="false">Professional & Soft Skills</button>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Category 1: Security Domains -->
+          <div class="skill-category-card" data-category="domains">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Security Domains</h3>
+                <p class="category-sub">Methodologies & Security Architecture</p>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">
+                <span class="pill-title">Application Security (AppSec)</span>
+                <span class="pill-badge">Expert</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">API Security & Testing</span>
+                <span class="pill-badge">Expert</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Vulnerability Assessment & Pen Testing (VAPT)</span>
+                <span class="pill-badge">Advanced</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Network Security & Segmentation</span>
+                <span class="pill-badge">Advanced</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Identity & Access Management (IAM / RBAC)</span>
+                <span class="pill-badge">Advanced</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">SAST & DAST Methodologies</span>
+                <span class="pill-badge">Advanced</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Incident Response & Risk Remediation</span>
+                <span class="pill-badge">Proficient</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Defense-in-Depth Architecture</span>
+                <span class="pill-badge">Proficient</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Category 2: Tools & Technologies -->
+          <div class="skill-category-card" data-category="tools">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Tools & Technologies</h3>
+                <p class="category-sub">Industry-Standard Security Stack</p>
+              </div>
+            </div>
+            <div class="tools-grid-items">
+              <div class="tool-badge-item">
+                <span class="tool-name">Burp Suite</span>
+                <span class="tool-desc">Web & API Interception</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">OWASP ZAP</span>
+                <span class="tool-desc">Automated DAST Scanner</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Nmap</span>
+                <span class="tool-desc">Port & Recon Enumeration</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Metasploit</span>
+                <span class="tool-desc">Exploitation Framework</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Wireshark</span>
+                <span class="tool-desc">Packet Analysis</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">SQLMap</span>
+                <span class="tool-desc">SQL Injection Audit</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Nessus</span>
+                <span class="tool-desc">Vulnerability Scanning</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Snort</span>
+                <span class="tool-desc">NIDS / Packet Logging</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Kali Linux</span>
+                <span class="tool-desc">Security OS & Tooling</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Python</span>
+                <span class="tool-desc">Scripting & Automation</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">Shodan & Amass</span>
+                <span class="tool-desc">OSINT & Subdomain Recon</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">ffuf & Nikto</span>
+                <span class="tool-desc">Web Fuzzing & Server Audits</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">MS Defender Endpoint</span>
+                <span class="tool-desc">EDR & Threat Protection</span>
+              </div>
+              <div class="tool-badge-item">
+                <span class="tool-name">SAST / DAST Tools</span>
+                <span class="tool-desc">Code & Binary Analysis</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: Professional & Additional -->
+          <div class="skill-category-card" data-category="professional">
+            <div class="category-header">
+              <div class="category-icon-box">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <div>
+                <h3 class="category-title">Professional & Collaborative</h3>
+                <p class="category-sub">Human-layer & DevSecOps Practices</p>
+              </div>
+            </div>
+            <ul class="skill-pill-list">
+              <li class="skill-pill">
+                <span class="pill-title">Actionable Vulnerability Reporting</span>
+                <span class="pill-badge">Core</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Cross-Functional Dev Collaboration</span>
+                <span class="pill-badge">Core</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Bug Bounty Program Coordination (50+ Hackers)</span>
+                <span class="pill-badge">Core</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Security Awareness & Phishing Simulations</span>
+                <span class="pill-badge">Certified</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">DevOps & DevSecOps Practices (In Progress)</span>
+                <span class="pill-badge">Active</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">IT & Systems Infrastructure Support</span>
+                <span class="pill-badge">Experienced</span>
+              </li>
+              <li class="skill-pill">
+                <span class="pill-title">Business Logic & Authorization Flaw Analysis</span>
+                <span class="pill-badge">Specialist</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WORK EXPERIENCE SECTION -->
+    <section class="section experience-section" id="experience">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career Journey</div>
+          <h2 class="section-title">Professional Work Experience</h2>
+          <p class="section-subtitle">
+            Demonstrated track record of vulnerability discovery, penetration testing, and enterprise security hardening.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <!-- Item 1: DefComm Solutions -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3 class="timeline-role">Security Engineer</h3>
+                  <div class="timeline-company">DefComm Solutions</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge badge-period">September 2025 – Present</span>
+                  <span class="badge badge-active">Current Role</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <p class="timeline-summary">
+                  Leading comprehensive security assessments across client applications, infrastructure, and cloud environments with a focus on attack surface reduction and secure deployment.
+                </p>
+
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Vulnerability Remediation:</strong> Conducted application, network, and cloud security assessments across multiple client systems, identifying and remediating <strong>50+ vulnerabilities</strong>.
+                  </li>
+                  <li>
+                    <strong>Attack Surface Reduction:</strong> Performed Vulnerability Assessment and Penetration Testing (VAPT) on web applications, APIs, and infrastructure, reducing the potential attack surface by <strong>40%</strong>.
+                  </li>
+                  <li>
+                    <strong>API Security Hardening:</strong> Assessed and secured APIs by systematically identifying weaknesses in authentication, authorization (BOLA/BFLA), and sensitive data exposure.
+                  </li>
+                  <li>
+                    <strong>Shift-Left Security:</strong> Implemented SAST and DAST techniques to detect and remediate critical security flaws prior to staging and production deployment.
+                  </li>
+                  <li>
+                    <strong>Engineering Partnership:</strong> Partnered closely with development teams to remediate vulnerabilities and bolster overall security posture with actionable developer documentation.
+                  </li>
+                  <li>
+                    <strong>Access Governance:</strong> Administered the company's admin dashboard, managing granular role-based access control (RBAC) and permissions for <strong>500+ enterprise users</strong>.
+                  </li>
+                  <li>
+                    <strong>Bug Bounty Program Leadership:</strong> Launched and managed an internal bug bounty program, coordinating <strong>30+ external testers</strong> to maintain up-to-date security standards.
+                  </li>
+                  <li>
+                    <strong>100% Quality Assurance:</strong> Verified 100% compliance with rigorous security design requirements prior to client delivery.
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag">SAST/DAST</span>
+                  <span class="tag">API Security</span>
+                  <span class="tag">Cloud Security</span>
+                  <span class="tag">RBAC</span>
+                  <span class="tag">Bug Bounty</span>
+                  <span class="tag">Compliance</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Silex Secure Labs -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3 class="timeline-role">Vulnerability Assessment & Penetration Tester</h3>
+                  <div class="timeline-company">Silex Secure Labs</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge badge-period">August 2025 – Present</span>
+                  <span class="badge badge-active">Active Engagement</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <p class="timeline-summary">
+                  Executing rigorous penetration testing across client web applications, insurance platforms, and backend APIs, focusing on privilege escalation and business logic flaws.
+                </p>
+
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Black-Box Client Pen Testing:</strong> Performed black-box penetration testing on a client insurance platform, simulating real-world external attacker conditions to uncover critical vulnerabilities in authentication, session management, and data handling without prior access to source code or internal architecture.
+                  </li>
+                  <li>
+                    <strong>Auth & Privilege Escalation Audits:</strong> Tested role-based access controls (RBAC) to detect privilege escalation and horizontal/vertical access bypass scenarios, uncovering <strong>15+ authentication and authorization weaknesses</strong>.
+                  </li>
+                  <li>
+                    <strong>Business Logic Analysis:</strong> Analyzed complex application logic to identify input validation flaws and subtle business logic vulnerabilities that automated scanners miss.
+                  </li>
+                  <li>
+                    <strong>Engineering Collaboration:</strong> Collaborated with engineering teams to improve secure authentication flows and strengthen token/session authorization mechanisms.
+                  </li>
+                  <li>
+                    <strong>Operational Reliability:</strong> Delivered IT support that maintained secure, reliable systems, reducing downtime and security incidents by <strong>30%</strong>.
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag">Black-Box Testing</span>
+                  <span class="tag">RBAC Privilege Escalation</span>
+                  <span class="tag">Business Logic</span>
+                  <span class="tag">Session Management</span>
+                  <span class="tag">Insurance Platform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: HackerOne Bug Bounty Researcher -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3 class="timeline-role">Bug Bounty Researcher</h3>
+                  <div class="timeline-company">HackerOne Platform</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge badge-period">January 2024 – Present</span>
+                  <span class="badge badge-accent">Independent Researcher</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <p class="timeline-summary">
+                  Performing independent ethical hacking and vulnerability assessments across multiple public and private target programs on the global HackerOne platform.
+                </p>
+
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Vulnerability Discovery & Disclosure:</strong> Identifying and responsibly disclosing high-impact flaws including Cross-Site Scripting (XSS), Broken Access Control (BAC), Insecure Direct Object References (IDOR), and Server Misconfigurations.
+                  </li>
+                  <li>
+                    <strong>Reconnaissance & Asset Discovery:</strong> Conducting in-depth reconnaissance and target enumeration using <code>Amass</code>, <code>Shodan</code>, <code>Burp Suite</code>, <code>OWASP ZAP</code>, and <code>ffuf</code> to uncover hidden endpoints, subdomains, and misconfigured assets.
+                  </li>
+                  <li>
+                    <strong>Hands-on Research:</strong> Continuously enhancing technical expertise in modern web application security, API testing, and cloud misconfiguration detection through active competitive bug bounty engagements.
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag">HackerOne</span>
+                  <span class="tag">IDOR</span>
+                  <span class="tag">Broken Access Control</span>
+                  <span class="tag">XSS</span>
+                  <span class="tag">Recon / OSINT</span>
+                  <span class="tag">ffuf</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4: Cybersecurity & VAPT Intern -->
+          <div class="timeline-item">
+            <div class="timeline-marker">
+              <div class="marker-dot"></div>
+              <div class="marker-line"></div>
+            </div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div class="timeline-role-info">
+                  <h3 class="timeline-role">Cybersecurity & VAPT Intern</h3>
+                  <div class="timeline-company">CFSS | The Red Users | Prodigy InfoTech | Hacktify</div>
+                </div>
+                <div class="timeline-meta">
+                  <span class="badge badge-period">January 2024 – August 2025</span>
+                </div>
+              </div>
+
+              <div class="timeline-body">
+                <p class="timeline-summary">
+                  Intensive hands-on internship across multiple security groups, applying offensive security tooling, vulnerability testing, and defensive configuration reviews.
+                </p>
+
+                <ul class="achievement-list">
+                  <li>
+                    <strong>Industry Tool Mastery:</strong> Gained extensive hands-on experience with industry-standard security tools including <code>Nmap</code>, <code>Burp Suite</code>, <code>OWASP ZAP</code>, <code>Metasploit</code>, <code>Nikto</code>, <code>Wireshark</code>, <code>SQLMap</code>, and <code>Kali Linux</code>.
+                  </li>
+                  <li>
+                    <strong>Penetration Testing Execution:</strong> Executed penetration tests that uncovered vulnerabilities including SQL Injection, Cross-Site Scripting (XSS), and authentication/authorization misconfigurations.
+                  </li>
+                  <li>
+                    <strong>Defensive Infrastructure Reviews:</strong> Conducted encryption reviews and firewall configuration audits to maintain confidentiality and mitigate sensitive data exposure risks.
+                  </li>
+                </ul>
+
+                <div class="timeline-tags">
+                  <span class="tag">Penetration Testing</span>
+                  <span class="tag">SQL Injection</span>
+                  <span class="tag">Firewall Auditing</span>
+                  <span class="tag">Encryption</span>
+                  <span class="tag">Kali Linux</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Featured Work</div>
+          <h2 class="section-title">Key Security Projects</h2>
+          <p class="section-subtitle">
+            Deep-dive case studies showcasing vulnerability assessments, API hardening, defense architecture, and security coordination.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-tag">Penetration Testing</div>
+              <span class="project-status">Completed</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Web Application Black Box Security Testing</h3>
+              <p class="project-desc">
+                Simulated real-world external attacker conditions on a live client insurance platform to uncover vulnerabilities in authentication, session management, and sensitive customer data handling without prior access to source code or internal network architecture.
+              </p>
+              
+              <div class="project-impact">
+                <span class="impact-label">Key Impact:</span>
+                <span class="impact-text">Discovered session flaws and data leaks; delivered full remediation report prior to production rollout.</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Black Box VAPT</span>
+                <span class="tech-tag">Burp Suite</span>
+                <span class="tech-tag">Session Auth</span>
+                <span class="tech-tag">OWASP Top 10</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-sm btn-outline view-details-btn" data-project="blackbox">View Case Study</button>
+              <a href="#contact" class="project-link" title="Request full report briefing">
+                <span>Inquire</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-tag">API Security</div>
+              <span class="project-status">Completed</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">API Security Assessment & Vulnerability Audit</h3>
+              <p class="project-desc">
+                Conducted rigorous security testing across RESTful APIs, identifying critical vulnerabilities in endpoint authentication, Broken Object Level Authorization (BOLA), input validation bypasses, and data exposure risks.
+              </p>
+
+              <div class="project-impact">
+                <span class="impact-label">Key Impact:</span>
+                <span class="impact-text">Hardened access controls and eliminated sensitive API parameter leaks across client microservices.</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">OWASP API Top 10</span>
+                <span class="tech-tag">BOLA / BFLA</span>
+                <span class="tech-tag">Postman</span>
+                <span class="tech-tag">OAuth / JWT</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-sm btn-outline view-details-btn" data-project="api">View Case Study</button>
+              <a href="#contact" class="project-link" title="Request briefing">
+                <span>Inquire</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-tag">Defensive Architecture</div>
+              <span class="project-status">Implemented</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Security Architecture & System Hardening</h3>
+              <p class="project-desc">
+                Designed and implemented an enterprise defense-in-depth security architecture. Configured multi-layered access controls, endpoint protection, network segmentation, and OS hardening benchmarks to dramatically elevate security posture.
+              </p>
+
+              <div class="project-impact">
+                <span class="impact-label">Key Impact:</span>
+                <span class="impact-text">Reduced attack surfaces by 40% and prevented lateral movement vectors across internal subnets.</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Defense-in-Depth</span>
+                <span class="tech-tag">Network Segmentation</span>
+                <span class="tech-tag">Endpoint Security</span>
+                <span class="tech-tag">RBAC</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-sm btn-outline view-details-btn" data-project="hardening">View Case Study</button>
+              <a href="#contact" class="project-link" title="Request briefing">
+                <span>Inquire</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-tag">Human Security</div>
+              <span class="project-status">Active Program</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Security Awareness & Phishing Simulation</h3>
+              <p class="project-desc">
+                Developed and delivered organization-wide cybersecurity awareness training, tailored phishing simulation campaigns, and secure computing guidelines to educate staff and drastically curb social engineering vulnerabilities.
+              </p>
+
+              <div class="project-impact">
+                <span class="impact-label">Key Impact:</span>
+                <span class="impact-text">Decreased employee click-through rates on phishing lures and created a proactive reporting culture.</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Phishing Simulation</span>
+                <span class="tech-tag">Social Engineering</span>
+                <span class="tech-tag">Employee Training</span>
+                <span class="tech-tag">Policy Design</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-sm btn-outline view-details-btn" data-project="awareness">View Case Study</button>
+              <a href="#contact" class="project-link" title="Request briefing">
+                <span>Inquire</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div class="project-card">
+            <div class="project-card-header">
+              <div class="project-type-tag">Crowdsourced Security</div>
+              <span class="project-status">Orchestrated</span>
+            </div>
+            <div class="project-card-body">
+              <h3 class="project-title">Bug Bounty Program Development & Coordination</h3>
+              <p class="project-desc">
+                Hosted and coordinated an end-to-end bug bounty program engaging 50+ ethical hackers. Supervised vulnerability intake, CVSS severity validation, remediation tracking with dev leads, and clear communication with security researchers.
+              </p>
+
+              <div class="project-impact">
+                <span class="impact-label">Key Impact:</span>
+                <span class="impact-text">Structured vulnerability disclosure workflow; remediated critical issues before external discovery.</span>
+              </div>
+
+              <div class="project-tech-stack">
+                <span class="tech-tag">Vulnerability Disclosure</span>
+                <span class="tech-tag">CVSS Triage</span>
+                <span class="tech-tag">50+ Ethical Hackers</span>
+                <span class="tech-tag">Remediation Tracking</span>
+              </div>
+            </div>
+            <div class="project-card-footer">
+              <button class="btn btn-sm btn-outline view-details-btn" data-project="bounty">View Case Study</button>
+              <a href="#contact" class="project-link" title="Request briefing">
+                <span>Inquire</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS SECTION -->
+    <section class="section edu-cert-section" id="education">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Credentials</div>
+          <h2 class="section-title">Education & Certifications</h2>
+          <p class="section-subtitle">
+            Formal scientific degree, specialized offensive security bootcamps, and verified technical certifications.
+          </p>
+        </div>
+
+        <div class="edu-cert-grid">
+          <!-- Left Column: Formal Education -->
+          <div class="edu-column">
+            <h3 class="column-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+              <span>Academic & Bootcamp Training</span>
+            </h3>
+
+            <div class="edu-card">
+              <div class="edu-year">Graduated August 2025</div>
+              <h4 class="edu-degree">B.Sc. in Genetics and Biotechnology</h4>
+              <div class="edu-school">University of Calabar</div>
+              <div class="edu-location">Calabar, Cross River State, Nigeria</div>
+              <p class="edu-notes">
+                Developed analytical rigor, systematic hypothesis testing, complex systems modeling, and scientific research methodologies that directly translate into deep vulnerability analysis and reverse engineering logic.
+              </p>
+            </div>
+
+            <div class="edu-card">
+              <div class="edu-year">2022 – 2023</div>
+              <h4 class="edu-degree">Ethical Hacking & Penetration Testing Bootcamp</h4>
+              <div class="edu-school">Zero to Hero Mastery</div>
+              <p class="edu-notes">
+                Comprehensive practical training in modern exploitation techniques, network reconnaissance, web app penetration testing, privilege escalation, and security testing toolkits.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Certifications -->
+          <div class="cert-column">
+            <h3 class="column-title">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+              <span>Professional Certifications</span>
+            </h3>
+
+            <div class="cert-grid">
+              <div class="cert-card">
+                <div class="cert-badge-icon">🛡️</div>
+                <div class="cert-info">
+                  <h4 class="cert-name">Certified API Hacking Expert (CAPIE)</h4>
+                  <p class="cert-issuer">Specialized API Offensive Security</p>
+                  <span class="cert-tag">Credential Verified</span>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-badge-icon">🎓</div>
+                <div class="cert-info">
+                  <h4 class="cert-name">Certified Cybersecurity Educator Professional (CCEP)</h4>
+                  <p class="cert-issuer">Security Training & Workforce Education</p>
+                  <span class="cert-tag">Credential Verified</span>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-badge-icon">☁️</div>
+                <div class="cert-info">
+                  <h4 class="cert-name">Multicloud Network Associate</h4>
+                  <p class="cert-issuer">Cloud Networking & Multi-Provider Architecture</p>
+                  <span class="cert-tag">Credential Verified</span>
+                </div>
+              </div>
+
+              <div class="cert-card">
+                <div class="cert-badge-icon">🔒</div>
+                <div class="cert-info">
+                  <h4 class="cert-name">Cloud Security and Audit Fundamentals</h4>
+                  <p class="cert-issuer">Cloud Compliance, Governance & Audit</p>
+                  <span class="cert-tag">Credential Verified</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Get In Touch</div>
+          <h2 class="section-title">Let’s Secure Your Next Big Initiative</h2>
+          <p class="section-subtitle">
+            Whether you need a dedicated Security Engineer, penetration testing consultation, or DevSecOps guidance, I'm ready to collaborate.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left Column: Contact Details & Quick Copy -->
+          <div class="contact-info-panel">
+            <h3 class="panel-heading">Contact Information</h3>
+            <p class="panel-desc">
+              Feel free to reach out via email, phone, or LinkedIn. I typically reply within 24 hours.
+            </p>
+
+            <div class="contact-cards-list">
+              <div class="contact-channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-title">Direct Email</span>
+                  <a href="mailto:michaelbassey808@gmail.com" class="channel-value" id="email-address">michaelbassey808@gmail.com</a>
+                </div>
+                <button class="btn btn-sm btn-ghost copy-btn" id="copy-email-btn" title="Copy email address" aria-label="Copy email">
+                  <svg class="copy-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="btn-text">Copy</span>
+                </button>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-title">Phone / WhatsApp</span>
+                  <a href="tel:+2349064430309" class="channel-value">+234 906 443 0309</a>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-title">Location</span>
+                  <span class="channel-value">Abuja, Nigeria (Available for Global Remote)</span>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.26c-.95 0-1.72.77-1.72 1.72s.77 1.72 1.72 1.72 1.73-.77 1.73-1.72-.78-1.72-1.73-1.72z"/></svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-title">LinkedIn</span>
+                  <a href="https://linkedin.com/in/michael-bassey" target="_blank" rel="noopener noreferrer" class="channel-value">linkedin.com/in/michael-bassey</a>
+                </div>
+              </div>
+
+              <div class="contact-channel-card">
+                <div class="channel-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="m4.93 4.93 4.24 4.24"></path><path d="m14.83 9.17 4.24-4.24"></path><path d="m14.83 14.83 4.24 4.24"></path><path d="m9.17 14.83-4.24 4.24"></path><circle cx="12" cy="12" r="4"></circle></svg>
+                </div>
+                <div class="channel-content">
+                  <span class="channel-title">Bug Bounty & Research</span>
+                  <a href="https://hackerone.com" target="_blank" rel="noopener noreferrer" class="channel-value">HackerOne Platform Engagement</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Send Message Form -->
+          <div class="contact-form-panel">
+            <form id="contact-form" class="contact-form" novalidate>
+              <h3 class="panel-heading">Send a Direct Message</h3>
+
+              <div class="form-group">
+                <label for="name" class="form-label">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Sarah Jenkins" required>
+                <span class="field-error" id="name-error">Please enter your name</span>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="s.jenkins@company.com" required>
+                <span class="field-error" id="email-error">Please enter a valid email address</span>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-control" placeholder="VAPT Engagement / Security Engineer Role" value="Inquiry Regarding Security Engineering / VAPT">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="required">*</span></label>
+                <textarea id="message" name="message" rows="5" class="form-control" placeholder="Describe your project, timeline, or open engineering opportunity..." required></textarea>
+                <span class="field-error" id="message-error">Please provide details regarding your inquiry</span>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="submit-btn">
+                <span class="btn-text">Transmit Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <div class="footer-brand">
+          <span class="logo-shield" aria-hidden="true">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </span>
+          <span class="logo-text">Michael Bassey</span>
+        </div>
+        <p class="footer-tagline">Cybersecurity Engineer & VAPT Specialist • Abuja, Nigeria</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Back to Top</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="https://linkedin.com/in/michael-bassey" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>&copy; <span id="current-year">2026</span> Michael Bassey. Built with clean HTML, CSS & JavaScript.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Back to Top Button -->
+  <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top" title="Scroll to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <!-- Project Case Study Detail Modal -->
+  <div class="modal-backdrop" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <span class="modal-tag" id="modal-project-type">Project Type</span>
+          <h3 class="modal-title" id="modal-project-title">Project Title</h3>
+        </div>
+        <button class="modal-close" id="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body" id="modal-project-content">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <a href="#contact" class="btn btn-primary modal-contact-btn" id="modal-inquire-btn">Discuss This Project</a>
+        <button class="btn btn-secondary modal-close-action" id="modal-dismiss-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div class="toast-notification" id="toast" role="alert" aria-live="polite">
+    <span class="toast-icon">✓</span>
+    <span class="toast-message" id="toast-message">Notification message</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
