@@ -1,10 +1,16 @@
 /**
+<<<<<<< HEAD
  * MICHAEL BASSEY - CYBERSECURITY PORTFOLIO
  * Modern Vanilla JavaScript Interactions
+=======
+ * MICHAEL BASSEY — PORTFOLIO
+ * High-Performance Vanilla JavaScript Interactions
+>>>>>>> a09fe29 (Latest version)
  */
 
 document.addEventListener('DOMContentLoaded', () => {
   // ==========================================
+<<<<<<< HEAD
   // 1. THEME TOGGLE (DARK / LIGHT MODE)
   // ==========================================
   const themeToggleBtn = document.getElementById('theme-toggle');
@@ -92,6 +98,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileToggle = document.getElementById('mobile-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const mobileLinks = document.querySelectorAll('.mobile-link');
+=======
+  // 1. MOBILE DRAWER NAVIGATION
+  // ==========================================
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+>>>>>>> a09fe29 (Latest version)
 
   function toggleMobileMenu() {
     const isOpen = mobileMenu.classList.contains('open');
@@ -106,6 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+<<<<<<< HEAD
   mobileToggle.addEventListener('click', toggleMobileMenu);
 
   mobileLinks.forEach(link => {
@@ -379,6 +393,74 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function showToast(message) {
     toastMessage.textContent = message;
+=======
+  if (mobileToggle && mobileMenu) {
+    mobileToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (mobileMenu.classList.contains('open')) {
+          toggleMobileMenu();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+        toggleMobileMenu();
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+        toggleMobileMenu();
+      }
+    });
+  }
+
+  // ==========================================
+  // 2. SCROLL SPY (ACTIVE NAV LINK HIGHLIGHT)
+  // ==========================================
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
+
+  function updateActiveNav() {
+    const scrollPosition = window.pageYOffset + 140;
+
+    sections.forEach(section => {
+      const top = section.offsetTop;
+      const height = section.offsetHeight;
+      const id = section.getAttribute('id');
+
+      if (scrollPosition >= top && scrollPosition < top + height) {
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${id}`) {
+            link.classList.add('active');
+          }
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveNav, { passive: true });
+  updateActiveNav();
+
+  // ==========================================
+  // 3. TOAST NOTIFICATION SYSTEM
+  // ==========================================
+  const toast = document.getElementById('toast');
+  const toastText = document.getElementById('toast-text');
+  let toastTimer;
+
+  function showToast(message) {
+    if (!toast || !toastText) return;
+
+    toastText.textContent = message;
+>>>>>>> a09fe29 (Latest version)
     toast.classList.add('show');
 
     clearTimeout(toastTimer);
@@ -387,10 +469,20 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3200);
   }
 
+<<<<<<< HEAD
+=======
+  // ==========================================
+  // 4. COPY EMAIL TO CLIPBOARD
+  // ==========================================
+  const copyEmailBtn = document.getElementById('copy-email-btn');
+  const emailAddress = 'michaelbassey808@gmail.com';
+
+>>>>>>> a09fe29 (Latest version)
   if (copyEmailBtn) {
     copyEmailBtn.addEventListener('click', async () => {
       try {
         if (navigator.clipboard && window.isSecureContext) {
+<<<<<<< HEAD
           await navigator.clipboard.writeText(emailText);
         } else {
           // Fallback for older browsers
@@ -407,21 +499,47 @@ document.addEventListener('DOMContentLoaded', () => {
         showToast('Email address copied to clipboard!');
       } catch (err) {
         showToast('Direct email: michaelbassey808@gmail.com');
+=======
+          await navigator.clipboard.writeText(emailAddress);
+        } else {
+          const tempInput = document.createElement('textarea');
+          tempInput.value = emailAddress;
+          tempInput.style.position = 'fixed';
+          tempInput.style.left = '-9999px';
+          document.body.appendChild(tempInput);
+          tempInput.focus();
+          tempInput.select();
+          document.execCommand('copy');
+          tempInput.remove();
+        }
+        showToast('Copied michaelbassey808@gmail.com to clipboard');
+      } catch (err) {
+        showToast('Email: michaelbassey808@gmail.com');
+>>>>>>> a09fe29 (Latest version)
       }
     });
   }
 
   // ==========================================
+<<<<<<< HEAD
   // 8. OFFICIAL CV DOWNLOAD NOTIFICATION HANDLER
   // ==========================================
   const cvDownloadBtns = document.querySelectorAll('.cv-download-btn');
   cvDownloadBtns.forEach(btn => {
     btn.addEventListener('click', () => {
+=======
+  // 5. RESUME / CV DOWNLOAD CONFIRMATION
+  // ==========================================
+  const resumeLinks = document.querySelectorAll('a[download]');
+  resumeLinks.forEach(link => {
+    link.addEventListener('click', () => {
+>>>>>>> a09fe29 (Latest version)
       showToast("Downloading Michael Bassey's official CV (PDF)...");
     });
   });
 
   // ==========================================
+<<<<<<< HEAD
   // 9. INTERACTIVE CONTACT FORM VALIDATION
   // ==========================================
   const contactForm = document.getElementById('contact-form');
@@ -488,6 +606,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // ==========================================
   // 10. DYNAMIC COPYRIGHT YEAR
+=======
+  // 6. CURRENT YEAR IN FOOTER
+>>>>>>> a09fe29 (Latest version)
   // ==========================================
   const yearElement = document.getElementById('current-year');
   if (yearElement) {
