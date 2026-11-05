@@ -1,147 +1,83 @@
-/**
- * MICHAEL BASSEY — PORTFOLIO
- * High-Performance Vanilla JavaScript Interactions
- */
-
+document.documentElement.classList.add('js');
 document.addEventListener('DOMContentLoaded', () => {
-  // ==========================================
-  // 1. MOBILE DRAWER NAVIGATION
-  // ==========================================
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const mobileMenu = document.getElementById('mobile-menu');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+  const toggle = document.getElementById('mobile-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const setMenu = open => {
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+  toggle.addEventListener('click', e => { e.stopPropagation(); setMenu(!menu.classList.contains('open')); });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('click', e => { if (!menu.contains(e.target) && !toggle.contains(e.target)) setMenu(false); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 
-  function toggleMobileMenu() {
-    const isOpen = mobileMenu.classList.contains('open');
-    if (isOpen) {
-      mobileMenu.classList.remove('open');
-      mobileToggle.setAttribute('aria-expanded', 'false');
-      mobileMenu.setAttribute('aria-hidden', 'true');
-    } else {
-      mobileMenu.classList.add('open');
-      mobileToggle.setAttribute('aria-expanded', 'true');
-      mobileMenu.setAttribute('aria-hidden', 'false');
-    }
-  }
-
-  if (mobileToggle && mobileMenu) {
-    mobileToggle.addEventListener('click', (e) => {
-      e.stopPropagation();
-      toggleMobileMenu();
+  // Active nav link via IntersectionObserver
+  const links = [...document.querySelectorAll('.desktop-nav a')];
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) links.forEach(l => l.classList.toggle('active', l.hash === '#' + en.target.id));
     });
+  }, { rootMargin: '-40% 0px -55% 0px' });
+  document.querySelectorAll('main section[id]').forEach(s => io.observe(s));
 
-    mobileNavLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        if (mobileMenu.classList.contains('open')) {
-          toggleMobileMenu();
-        }
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (mobileMenu.classList.contains('open') && !mobileMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
-        toggleMobileMenu();
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-        toggleMobileMenu();
-      }
-    });
-  }
-
-  // ==========================================
-  // 2. SCROLL SPY (ACTIVE NAV LINK HIGHLIGHT)
-  // ==========================================
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.desktop-nav .nav-link');
-
-  function updateActiveNav() {
-    const scrollPosition = window.pageYOffset + 140;
-
-    sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollPosition >= top && scrollPosition < top + height) {
-        navLinks.forEach(link => {
-          link.classList.remove('active');
-          if (link.getAttribute('href') === `#${id}`) {
-            link.classList.add('active');
-          }
-        });
-      }
-    });
-  }
-
-  window.addEventListener('scroll', updateActiveNav, { passive: true });
-  updateActiveNav();
-
-  // ==========================================
-  // 3. TOAST NOTIFICATION SYSTEM
-  // ==========================================
+  // Toast + copy email
   const toast = document.getElementById('toast');
   const toastText = document.getElementById('toast-text');
-  let toastTimer;
-
-  function showToast(message) {
-    if (!toast || !toastText) return;
-
-    toastText.textContent = message;
+  let timer;
+  const showToast = msg => {
+    toastText.textContent = msg;
     toast.classList.add('show');
-
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      toast.classList.remove('show');
-    }, 3200);
-  }
-
-  // ==========================================
-  // 4. COPY EMAIL TO CLIPBOARD
-  // ==========================================
-  const copyEmailBtn = document.getElementById('copy-email-btn');
-  const emailAddress = 'michaelbassey808@gmail.com';
-
-  if (copyEmailBtn) {
-    copyEmailBtn.addEventListener('click', async () => {
-      try {
-        if (navigator.clipboard && window.isSecureContext) {
-          await navigator.clipboard.writeText(emailAddress);
-        } else {
-          const tempInput = document.createElement('textarea');
-          tempInput.value = emailAddress;
-          tempInput.style.position = 'fixed';
-          tempInput.style.left = '-9999px';
-          document.body.appendChild(tempInput);
-          tempInput.focus();
-          tempInput.select();
-          document.execCommand('copy');
-          tempInput.remove();
-        }
-        showToast('Copied michaelbassey808@gmail.com to clipboard');
-      } catch (err) {
-        showToast('Email: michaelbassey808@gmail.com');
-      }
-    });
-  }
-
-  // ==========================================
-  // 5. RESUME / CV DOWNLOAD CONFIRMATION
-  // ==========================================
-  const resumeLinks = document.querySelectorAll('a[download]');
-  resumeLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      showToast("Downloading Michael Bassey's official CV (PDF)...");
-    });
+    clearTimeout(timer);
+    timer = setTimeout(() => toast.classList.remove('show'), 3000);
+  };
+  const copyBtn = document.getElementById('copy-email-btn');
+  copyBtn.addEventListener('click', async () => {
+    const email = 'michaelbassey808@gmail.com';
+    try {
+      await navigator.clipboard.writeText(email);
+      showToast('Email address copied');
+    } catch {
+      showToast(email);
+    }
   });
 
-  // ==========================================
-  // 6. CURRENT YEAR IN FOOTER
-  // ==========================================
-  const yearElement = document.getElementById('current-year');
-  if (yearElement) {
-    yearElement.textContent = new Date().getFullYear();
-  }
+  // Scroll animations
+  const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const targets = document.querySelectorAll('.section .kicker, .section h2, .card, .timeline > li, .toolkit > div, .contact-box, .note');
+  targets.forEach(el => {
+    el.classList.add('reveal');
+    const sibs = [...el.parentElement.children].filter(c => c.classList.contains('reveal') || c === el);
+    el.style.setProperty('--d', Math.min(sibs.indexOf(el), 4) * 0.09 + 's');
+  });
+  const revealIO = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) { e.target.classList.add('in'); revealIO.unobserve(e.target); }
+  }), { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+  targets.forEach(el => revealIO.observe(el));
+
+  // Count-up stats
+  document.querySelectorAll('.stats dt').forEach(dt => {
+    const m = dt.textContent.match(/^(\d+)(.*)$/);
+    if (!m || reduce) return;
+    const end = +m[1], suffix = m[2], t0 = performance.now() + 700;
+    const tick = now => {
+      const p = Math.min(Math.max((now - t0) / 1200, 0), 1);
+      dt.textContent = Math.round(end * (1 - Math.pow(1 - p, 3))) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    };
+    dt.textContent = '0' + suffix;
+    requestAnimationFrame(tick);
+  });
+
+  // Scroll progress + header shadow
+  const bar = document.getElementById('progress');
+  const header = document.querySelector('.site-header');
+  const onScroll = () => {
+    const h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
+    header.classList.toggle('scrolled', scrollY > 10);
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  document.getElementById('current-year').textContent = new Date().getFullYear();
 });
